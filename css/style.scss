@@ -1,9 +1,366 @@
 @charset "utf-8";
 @import 'https://fonts.googleapis.com/css?family=Pathway+Gothic+One';
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@700&display=swap');
 
 html {
-font-size: 62.5%;
-font-family: 'Pathway Gothic One', sans-serif;
-background-color: white;
+  font-size: 62.5%;
+  font-family: 'Pathway Gothic One', sans-serif;
+  background-color: #F8F6F3;
+}
+
+.photos {
+  width: 500px;
+  background-color: #220D00;
+  margin: 30px auto 30px auto;
+  position: relative;
+  text-align: center;
+  @media(max-width: 768px) {
+    width: 350px;
+  }
+}
+
+.holes {
+  background-image: url(../images/hole.svg);
+  width: 32px;
+  height: 102%;
+  background-size: contain;
+  background-repeat-y: repeat;
+  position: absolute;
+  top: -10px;
+  &.--left {
+    left: 26px;
+  }
+  &.--right {
+    right: 26px;
+  }
+  @media(max-width: 768px) {
+    width: 25px;
+  }
+}
+
+.fuji {
+  position: relative;
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-size: 16px;
+  color: #E0CB6E;
+  &::before {
+    content: "S-400";
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    transform: rotate(-90deg);
+  }
+  &::after {
+    content: "FUJI";
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    transform: rotate(-90deg);
+  }
+  @media(max-width: 768px) {
+    font-size: 12px;
+    &::before {
+      left: -6px;
+    }
+    &::after {
+      right: 0;
+    }
+  }
+}
+
+.fuji-2 {
+  position: relative;
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-size: 16px;
+  color: #E0CB6E;
+  &::before {
+    content: "FUJI";
+    position: absolute;
+    top: 50%;
+    left: -5px;
+    transform: rotate(-90deg);
+  }
+  &::after {
+    content: "S-400";
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    transform: rotate(-90deg);
+  }
+  @media(max-width: 768px) {
+    font-size: 12px;
+    &::before {
+      left: 0;
+    }
+    &::after {
+      right: -6px;
+    }
+  }
+}
+
+.photo {
+  width: 360px;
+  height: auto;
+  padding: 8px 0 8px 0;
+  margin: auto;
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-size: 16px;
+  color: #E0CB6E;
+  position: relative;
+  img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    opacity: 0.3;
+  }
+  img:hover {
+    opacity: 1;
+  }
+  @media(max-width: 768px) {
+    font-size: 12px;
+    width: 230px;
+    img {
+      opacity: 1;
+    }
+  }
+}
+
+.photo--1 {
+  padding-top: 16px;
+  &::before {
+    content: "1";
+    position: absolute;
+    top: 50%;
+    left: -60px;
+    transform: rotate(-90deg);
+  }
+  &::after {
+    content: "1";
+    position: absolute;
+    top: 50%;
+    right: -60px;
+    transform: rotate(-90deg);
+  }
+  @media(max-width: 768px) {
+    &::before {
+      left: -50px;
+    }
+    &::after {
+      right: -50px;
+    }
+  }
+}
+
+.photo--2 {
+  &::before {
+    content: "2";
+    position: absolute;
+    top: 50%;
+    left: -60px;
+    transform: rotate(-90deg);
+  }
+  &::after {
+    content: "2";
+    position: absolute;
+    top: 50%;
+    right: -60px;
+    transform: rotate(-90deg);
+  }
+  @media(max-width: 768px) {
+    &::before {
+      left: -50px;
+    }
+    &::after {
+      right: -50px;
+    }
+  }
+}
+
+.photo--3 {
+  &::before {
+    content: "3";
+    position: absolute;
+    top: 50%;
+    left: -60px;
+    transform: rotate(-90deg);
+  }
+  &::after {
+    content: "3";
+    position: absolute;
+    top: 50%;
+    right: -60px;
+    transform: rotate(-90deg);
+  }
+  @media(max-width: 768px) {
+    &::before {
+      left: -50px;
+    }
+    &::after {
+      right: -50px;
+    }
+  }
+}
+
+.photo--4 {
+  &::before {
+    content: "4";
+    position: absolute;
+    top: 50%;
+    left: -60px;
+    transform: rotate(-90deg);
+  }
+  &::after {
+    content: "4";
+    position: absolute;
+    top: 50%;
+    right: -60px;
+    transform: rotate(-90deg);
+  }
+  @media(max-width: 768px) {
+    &::before {
+      left: -50px;
+    }
+    &::after {
+      right: -50px;
+    }
+  }
+}
+
+.photo--5 {
+  &::before {
+    content: "5";
+    position: absolute;
+    top: 50%;
+    left: -60px;
+    transform: rotate(-90deg);
+  }
+  &::after {
+    content: "5";
+    position: absolute;
+    top: 50%;
+    right: -60px;
+    transform: rotate(-90deg);
+  }
+  @media(max-width: 768px) {
+    &::before {
+      left: -50px;
+    }
+    &::after {
+      right: -50px;
+    }
+  }
+}
+
+.photo--6 {
+  &::before {
+    content: "6";
+    position: absolute;
+    top: 50%;
+    left: -60px;
+    transform: rotate(-90deg);
+  }
+  &::after {
+    content: "6";
+    position: absolute;
+    top: 50%;
+    right: -60px;
+    transform: rotate(-90deg);
+  }
+  @media(max-width: 768px) {
+    &::before {
+      left: -50px;
+    }
+    &::after {
+      right: -50px;
+    }
+  }
+}
+
+.photo--7 {
+  &::before {
+    content: "7";
+    position: absolute;
+    top: 50%;
+    left: -60px;
+    transform: rotate(-90deg);
+  }
+  &::after {
+    content: "7";
+    position: absolute;
+    top: 50%;
+    right: -60px;
+    transform: rotate(-90deg);
+  }
+  @media(max-width: 768px) {
+    &::before {
+      left: -50px;
+    }
+    &::after {
+      right: -50px;
+    }
+  }
+}
+
+.photo--8 {
+  &::before {
+    content: "8";
+    position: absolute;
+    top: 50%;
+    left: -60px;
+    transform: rotate(-90deg);
+  }
+  &::after {
+    content: "8";
+    position: absolute;
+    top: 50%;
+    right: -60px;
+    transform: rotate(-90deg);
+  }
+  @media(max-width: 768px) {
+    &::before {
+      left: -50px;
+    }
+    &::after {
+      right: -50px;
+    }
+  }
+}
+
+.photo--9 {
+  &::before {
+    content: "9";
+    position: absolute;
+    top: 50%;
+    left: -60px;
+    transform: rotate(-90deg);
+  }
+  &::after {
+    content: "9";
+    position: absolute;
+    top: 50%;
+    right: -60px;
+    transform: rotate(-90deg);
+  }
+  @media(max-width: 768px) {
+    &::before {
+      left: -50px;
+    }
+    &::after {
+      right: -50px;
+    }
+  }
+}
+
+.credit {
+  display: inline-block;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 28px 0;
+  color: white;
+  font-family: 'Nanum Myeongjo', serif;
+  @media(max-width: 768px) {
+    font-size: 18px;
+    padding: 18px 0;
+  }
 }
