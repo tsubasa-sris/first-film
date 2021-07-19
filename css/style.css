@@ -11,7 +11,8 @@ html {
   background-color: #220D00;
   margin: 30px auto 30px auto;
   position: relative;
-  text-align: center; }
+  text-align: center;
+  opacity: 0.95; }
   @media (max-width: 768px) {
     .photos {
       width: 350px; } }
@@ -275,7 +276,8 @@ html {
   font-size: 20px;
   padding: 28px 0;
   color: white;
-  font-family: 'Nanum Myeongjo', serif; }
+  font-family: 'Nanum Myeongjo', serif;
+  cursor: pointer; }
   @media (max-width: 768px) {
     .credit {
       font-size: 18px;
@@ -334,5 +336,26 @@ html {
       .modal__content img {
         height: auto;
         width: 100%; } }
+
+.modal__content--credit {
+  top: 100px;
+  color: black;
+  font-size: 16px;
+  line-height: 22px;
+  height: auto;
+  width: 50%;
+  background: white;
+  padding: 48px; }
+  .modal__content--credit .text {
+    padding-bottom: 48px; }
+  .modal__content--credit h1 {
+    color: #8C5454;
+    padding: 0px 0px 12px 0; }
+  .modal__content--credit .sns {
+    margin-bottom: 40px; }
+  .modal__content--credit a {
+    color: #000;
+    display: block;
+    padding-top: 0; }
 
 /*# sourceMappingURL=style.css.map */
