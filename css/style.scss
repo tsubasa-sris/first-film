@@ -388,38 +388,33 @@ html {
 .modal__content{
   left: 0;
   right: 0;
-  padding: 40px 0 40px 0;
   margin: auto;
   position: absolute;
   font-family: 'Nanum Myeongjo', serif;
   color: white;
   font-size: 16px;
+  flex-flow: column;
+  display: flex;
+  align-items: center;
+  top: 50%;
+  bottom: 50%;
   height: 70%;
-  width: fit-content;
-  @media(max-width: 768px) {
-    height: auto;
-    top: 0%;
-  }
-  @media(max-width: 415px) {
-    height: auto;
-    top: 20%;
-  }
+  box-sizing: border-box;
+  justify-content: center;
   h1 {
-    padding: 32px;
-  }
-  a {
-    color: white;
-    text-decoration: none;
-    margin-top: 40px;
-    display: inline-block;
+    display: inline;
   }
   img {
+    width: auto;
     height: 100%;
-    @media(max-width: 768px) {
-      height: auto;
-      width: 80%;
-    }
-    @media(max-width: 415px) {
+    display: block;
+    margin-bottom: 32px;
+  }
+  @media(max-width: 768px) {
+    padding: 24px;
+    display: inline-block;
+    height: fit-content;
+    img {
       height: auto;
       width: 100%;
     }

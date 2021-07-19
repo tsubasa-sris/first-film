@@ -302,36 +302,31 @@ html {
 .modal__content {
   left: 0;
   right: 0;
-  padding: 40px 0 40px 0;
   margin: auto;
   position: absolute;
   font-family: 'Nanum Myeongjo', serif;
   color: white;
   font-size: 16px;
+  flex-flow: column;
+  display: flex;
+  align-items: center;
+  top: 50%;
+  bottom: 50%;
   height: 70%;
-  width: fit-content; }
+  box-sizing: border-box;
+  justify-content: center; }
+  .modal__content h1 {
+    display: inline; }
+  .modal__content img {
+    width: auto;
+    height: 100%;
+    display: block;
+    margin-bottom: 32px; }
   @media (max-width: 768px) {
     .modal__content {
-      height: auto;
-      top: 0%; } }
-  @media (max-width: 415px) {
-    .modal__content {
-      height: auto;
-      top: 20%; } }
-  .modal__content h1 {
-    padding: 32px; }
-  .modal__content a {
-    color: white;
-    text-decoration: none;
-    margin-top: 40px;
-    display: inline-block; }
-  .modal__content img {
-    height: 100%; }
-    @media (max-width: 768px) {
-      .modal__content img {
-        height: auto;
-        width: 80%; } }
-    @media (max-width: 415px) {
+      padding: 24px;
+      display: inline-block;
+      height: fit-content; }
       .modal__content img {
         height: auto;
         width: 100%; } }
