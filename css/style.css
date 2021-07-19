@@ -9,7 +9,7 @@ html {
 .photos {
   width: 500px;
   background-color: #220D00;
-  margin: 30px auto 30px auto;
+  margin: 30px auto;
   position: relative;
   text-align: center;
   opacity: 0.95; }
@@ -86,8 +86,7 @@ html {
 .photo {
   width: 360px;
   height: auto;
-  padding: 8px 0 8px 0;
-  margin: auto;
+  margin: 8px auto;
   font-family: 'Bai Jamjuree', sans-serif;
   font-size: 16px;
   color: #E0CB6E;
@@ -274,14 +273,14 @@ html {
 .credit {
   display: inline-block;
   font-size: 20px;
-  padding: 28px 0;
+  margin: 28px 0;
   color: white;
   font-family: 'Nanum Myeongjo', serif;
   cursor: pointer; }
   @media (max-width: 768px) {
     .credit {
       font-size: 18px;
-      padding: 18px 0; } }
+      margin: 18px 0; } }
 
 .modal {
   display: none;
@@ -294,7 +293,7 @@ html {
   z-index: 1; }
 
 .modal__bg {
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.95);
   height: 100vh;
   position: absolute;
   width: 100%;
@@ -324,7 +323,7 @@ html {
   .modal__content a {
     color: white;
     text-decoration: none;
-    padding-top: 40px;
+    margin-top: 40px;
     display: inline-block; }
   .modal__content img {
     height: 100%; }
@@ -352,7 +351,7 @@ html {
     color: #8C5454;
     padding: 0px 0px 12px 0; }
   .modal__content--credit .sns {
-    margin-bottom: 40px; }
+    margin: 0 0 40px; }
   .modal__content--credit a {
     color: #000;
     display: block;
