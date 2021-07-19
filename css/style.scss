@@ -108,10 +108,11 @@ html {
   font-size: 16px;
   color: #E0CB6E;
   position: relative;
+  display: inline-block;
+  cursor: pointer;
   img {
     width: 100%;
     height: auto;
-    cursor: pointer;
     opacity: 0.3;
   }
   img:hover {
@@ -355,12 +356,71 @@ html {
 .credit {
   display: inline-block;
   font-size: 20px;
-  cursor: pointer;
   padding: 28px 0;
   color: white;
   font-family: 'Nanum Myeongjo', serif;
   @media(max-width: 768px) {
     font-size: 18px;
     padding: 18px 0;
+  }
+}
+
+.modal{
+  display: none;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.modal__bg{
+  background: rgba(0, 0, 0, 0.9);
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+  display: block;
+}
+
+.modal__content{
+  left: 0;
+  right: 0;
+  padding: 40px 0 40px 0;
+  margin: auto;
+  position: absolute;
+  font-family: 'Nanum Myeongjo', serif;
+  color: white;
+  font-size: 16px;
+  height: 70%;
+  width: fit-content;
+  @media(max-width: 768px) {
+    height: auto;
+    top: 0%;
+  }
+  @media(max-width: 415px) {
+    height: auto;
+    top: 20%;
+  }
+  h1 {
+    padding: 32px;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+    padding-top: 40px;
+    display: inline-block;
+  }
+  img {
+    height: 100%;
+    @media(max-width: 768px) {
+      height: auto;
+      width: 80%;
+    }
+    @media(max-width: 415px) {
+      height: auto;
+      width: 100%;
+    }
   }
 }

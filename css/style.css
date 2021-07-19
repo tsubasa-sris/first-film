@@ -90,11 +90,12 @@ html {
   font-family: 'Bai Jamjuree', sans-serif;
   font-size: 16px;
   color: #E0CB6E;
-  position: relative; }
+  position: relative;
+  display: inline-block;
+  cursor: pointer; }
   .photo img {
     width: 100%;
     height: auto;
-    cursor: pointer;
     opacity: 0.3; }
   .photo img:hover {
     opacity: 1; }
@@ -272,7 +273,6 @@ html {
 .credit {
   display: inline-block;
   font-size: 20px;
-  cursor: pointer;
   padding: 28px 0;
   color: white;
   font-family: 'Nanum Myeongjo', serif; }
@@ -280,5 +280,59 @@ html {
     .credit {
       font-size: 18px;
       padding: 18px 0; } }
+
+.modal {
+  display: none;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1; }
+
+.modal__bg {
+  background: rgba(0, 0, 0, 0.9);
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+  display: block; }
+
+.modal__content {
+  left: 0;
+  right: 0;
+  padding: 40px 0 40px 0;
+  margin: auto;
+  position: absolute;
+  font-family: 'Nanum Myeongjo', serif;
+  color: white;
+  font-size: 16px;
+  height: 70%;
+  width: fit-content; }
+  @media (max-width: 768px) {
+    .modal__content {
+      height: auto;
+      top: 0%; } }
+  @media (max-width: 415px) {
+    .modal__content {
+      height: auto;
+      top: 20%; } }
+  .modal__content h1 {
+    padding: 32px; }
+  .modal__content a {
+    color: white;
+    text-decoration: none;
+    padding-top: 40px;
+    display: inline-block; }
+  .modal__content img {
+    height: 100%; }
+    @media (max-width: 768px) {
+      .modal__content img {
+        height: auto;
+        width: 80%; } }
+    @media (max-width: 415px) {
+      .modal__content img {
+        height: auto;
+        width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */
