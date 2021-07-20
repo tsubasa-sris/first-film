@@ -329,9 +329,9 @@ html {
     display: block;
     text-decoration: none;
     color: white; }
-  @media (max-width: 768px) {
+  @media (max-width: 415px) {
     .modal__content {
-      padding: 24px;
+      padding: 16px;
       display: inline-block;
       height: fit-content; }
       .modal__content img {
