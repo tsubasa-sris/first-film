@@ -337,20 +337,16 @@ html {
         width: 100%; } }
 
 .modal__content-credit {
+  position: absolute;
   left: 0;
   right: 0;
-  margin: auto;
-  position: absolute;
-  color: white;
   font-size: 16px;
   color: black;
   line-height: 22px;
-  height: fit-content;
   width: 60%;
-  background: white;
-  padding: 48px; }
+  background: white; }
   .modal__content-credit .text {
-    padding-bottom: 48px; }
+    margin-bottom: 48px; }
   .modal__content-credit h1 {
     color: #8C5454;
     padding: 0px 0px 12px 0;
@@ -363,6 +359,8 @@ html {
     padding-top: 0; }
   @media (max-width: 768px) {
     .modal__content-credit {
-      width: 90%; } }
+      width: 80%;
+      top: 30%;
+      bottom: none; } }
 
 /*# sourceMappingURL=style.css.map */
