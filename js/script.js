@@ -12,3 +12,11 @@ $(function(){
         return false;
     });
 });
+
+$( function(){
+   $( 'img.lazy' ).lazyload({
+       effect: "fadeIn",
+       effect_speed: 1500,
+       threshold: 200,
+   }) ;
+}) ;
