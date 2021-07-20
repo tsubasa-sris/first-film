@@ -329,9 +329,7 @@ html {
     color: white; }
   @media (max-width: 415px) {
     .modal__content {
-      padding: 16px;
-      display: inline-block;
-      height: fit-content; }
+      padding: 16px; }
       .modal__content img {
         height: auto;
         width: 100%; } }
