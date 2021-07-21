@@ -9,6 +9,30 @@ html {
   background-color: #F8F6F3;
 }
 
+.loading {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  // transition: all 1s;
+  background-color: white;
+  img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}
+
+.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
 .photos {
   width: 500px;
   background-color: #220D00;
