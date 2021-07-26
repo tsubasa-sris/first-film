@@ -479,3 +479,32 @@ html {
     bottom: none;
   }
 }
+
+.index {
+  background: black;
+  height: 100vh;
+  padding: 32px;
+  a {
+    width: 100%;
+    font-size: 20px;
+    color: white;
+    font-family: 'Nanum Myeongjo', serif;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+  }
+}
+
+.giphy {
+  margin: 0 auto 32px;;
+  width: 400px;
+  max-height: 400px;
+  iframe {
+    width: 100%;
+    max-height: inherit;
+    margin-bottom: 32px;
+  }
+  @media(max-width: 768px) {
+    width: 100%;
+  }
+}
