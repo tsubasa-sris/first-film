@@ -1,0 +1,88 @@
+html {
+  font-size: 62.5%;
+  font-family: 'Pathway Gothic One', sans-serif;
+  background-color: #F8F6F3;
+}
+
+.films {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  text-align: center;
+  margin-left: 27px;
+  @media(max-width: 768px) {
+    flex-direction: column;
+    margin: 0;
+  }
+}
+
+.film {
+  width: 140px;
+  margin: 0 54px;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  img {
+    width: 100%;
+    height: auto;
+  }
+  @media(max-width: 768px) {
+    width: 100px;
+    margin-bottom: 24px;
+    img {
+      transform: rotate( 90deg );
+    }
+  }
+}
+
+.film--3rd {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.title {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 16px;
+  margin-top: 16px;
+  margin-left: -27px;
+  &.title--sp {
+    display: none;
+  }
+  @media(max-width: 768px) {
+    margin: 0;
+    &.title--pc {
+      display: none;
+    }
+    &.title--sp{
+      display: block;
+    }
+  }
+}
+
+.cat {
+  position: sticky;
+  bottom: 2px;
+  font-size: 26px;
+  text-align: right;
+  margin-right: 40px;
+  text-decoration: none;
+  display: block;
+  &::before {
+    content: "";
+  }
+  &:hover::before {
+    content: "💓";
+    position: absolute;
+    bottom: 27px;
+    font-size: 16px;
+    right: 2px;
+    display: block;
+  }
+  @media(max-width: 768px) {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    margin-right: 20px;
+  }
+}
