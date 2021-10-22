@@ -72,26 +72,26 @@ html {
   font-size: 16px;
   color: #E0CB6E;
   &::before {
-    content: "S-400";
+    content: "HP5 PLUS";
     position: absolute;
     top: 50%;
-    left: -10px;
+    left: -25px;
     transform: rotate(-90deg);
   }
   &::after {
-    content: "FUJI";
+    content: "ILFORD";
     position: absolute;
     top: 50%;
-    right: -5px;
+    right: -15px;
     transform: rotate(-90deg);
   }
   @media(max-width: 768px) {
     font-size: 12px;
     &::before {
-      left: -6px;
+      left: -15px;
     }
     &::after {
-      right: 0;
+      right: -10px;
     }
   }
 }
@@ -102,26 +102,26 @@ html {
   font-size: 16px;
   color: #E0CB6E;
   &::before {
-    content: "FUJI";
+    content: "HP5 PLUS";
     position: absolute;
     top: 50%;
-    left: -5px;
+    left: -25px;
     transform: rotate(-90deg);
   }
   &::after {
-    content: "S-400";
+    content: "ILFORD";
     position: absolute;
     top: 50%;
-    right: -10px;
+    right: -15px;
     transform: rotate(-90deg);
   }
   @media(max-width: 768px) {
     font-size: 12px;
     &::before {
-      left: 0;
+      left: -15px;
     }
     &::after {
-      right: -6px;
+      right: -10px;
     }
   }
 }
@@ -479,35 +479,6 @@ html {
     width: 80%;
     top: 30%;
     bottom: none;
-  }
-}
-
-.index {
-  background: black;
-  height: 100vh;
-  padding: 32px;
-  a {
-    width: 100%;
-    font-size: 20px;
-    color: white;
-    font-family: 'Nanum Myeongjo', serif;
-    text-decoration: none;
-    display: inline-block;
-    text-align: center;
-  }
-}
-
-.giphy {
-  margin: 0 auto 32px;;
-  width: 400px;
-  max-height: 400px;
-  iframe {
-    width: 100%;
-    max-height: inherit;
-    margin-bottom: 32px;
-  }
-  @media(max-width: 768px) {
-    width: 100%;
   }
 }
 

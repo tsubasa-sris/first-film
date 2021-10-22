@@ -32,15 +32,13 @@ html {
   margin: 30px auto;
   position: relative;
   text-align: center;
-  opacity: 0.95;
-  overflow: hidden;
-  box-shadow: 7px 7px 7px 0 rgba(0, 0, 0, 0.3); }
+  opacity: 0.95; }
   @media (max-width: 768px) {
     .photos {
       width: 350px; } }
 
 .holes {
-  background-image: url(../images/hole-shadow.png);
+  background-image: url(../images/hole.svg);
   width: 32px;
   height: 102%;
   background-size: contain;
@@ -61,16 +59,16 @@ html {
   font-size: 16px;
   color: #E0CB6E; }
   .fuji::before {
-    content: "S-400";
+    content: "HP5 PLUS";
     position: absolute;
     top: 50%;
-    left: -10px;
+    left: -25px;
     transform: rotate(-90deg); }
   .fuji::after {
-    content: "FUJI";
+    content: "ILFORD";
     position: absolute;
     top: 50%;
-    right: -5px;
+    right: -15px;
     transform: rotate(-90deg); }
   @media (max-width: 768px) {
     .fuji {
@@ -86,16 +84,16 @@ html {
   font-size: 16px;
   color: #E0CB6E; }
   .fuji-2::before {
-    content: "FUJI";
+    content: "HP5 PLUS";
     position: absolute;
     top: 50%;
-    left: -5px;
+    left: -25px;
     transform: rotate(-90deg); }
   .fuji-2::after {
-    content: "S-400";
+    content: "ILFORD";
     position: absolute;
     top: 50%;
-    right: -10px;
+    right: -15px;
     transform: rotate(-90deg); }
   @media (max-width: 768px) {
     .fuji-2 {
@@ -410,11 +408,10 @@ html {
 
 .link {
   text-align: center;
-  margin: 32px;
-  font-size: 20px;
+  margin: 24px;
+  font-size: 24px;
   text-decoration: none;
   display: block;
-  color: black;
-  font-family: 'Nanum Myeongjo', serif; }
+  color: black; }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=black-and-white-film.css.map */
