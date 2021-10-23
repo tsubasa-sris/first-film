@@ -23,6 +23,7 @@ html {
   cursor: pointer;
   text-decoration: none;
   color: black;
+  position: relative;
   img {
     width: 100%;
     height: auto;
@@ -32,6 +33,24 @@ html {
     margin-bottom: 24px;
     img {
       transform: rotate( 90deg );
+    }
+  }
+  &:hover {
+    img {
+      transform: rotate( 10deg );
+    }
+    &::before {
+      content: "";
+      background-image: url(../images/index/accent.svg);
+      position: absolute;
+      top: -40px;
+      left: -40px;
+      width: 70px;
+      height: 100px;
+      display: inline-block;
+      background-size: contain;
+      vertical-align: middle;
+      background-repeat: no-repeat;
     }
   }
 }

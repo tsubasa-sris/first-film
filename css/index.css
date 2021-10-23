@@ -21,7 +21,8 @@ html {
   margin: 0 54px;
   cursor: pointer;
   text-decoration: none;
-  color: black; }
+  color: black;
+  position: relative; }
   .film img {
     width: 100%;
     height: auto; }
@@ -31,6 +32,20 @@ html {
       margin-bottom: 24px; }
       .film img {
         transform: rotate(90deg); } }
+  .film:hover img {
+    transform: rotate(10deg); }
+  .film:hover::before {
+    content: "";
+    background-image: url(../images/index/accent.svg);
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    width: 70px;
+    height: 100px;
+    display: inline-block;
+    background-size: contain;
+    vertical-align: middle;
+    background-repeat: no-repeat; }
 
 .film--3rd {
   opacity: 0.3;
