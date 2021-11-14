@@ -38,6 +38,9 @@ html {
   &:hover {
     img {
       transform: rotate( 10deg );
+      @media(max-width: 768px) {
+        transform: rotate( 80deg );
+      }
     }
     &::before {
       content: "";
@@ -51,6 +54,12 @@ html {
       background-size: contain;
       vertical-align: middle;
       background-repeat: no-repeat;
+      @media(max-width: 768px) {
+        top: -40px;
+        left: 80px;
+        transform: rotate( 80deg );
+        width: 50px;
+      }
     }
   }
 }

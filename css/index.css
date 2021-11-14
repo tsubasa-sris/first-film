@@ -34,6 +34,9 @@ html {
         transform: rotate(90deg); } }
   .film:hover img {
     transform: rotate(10deg); }
+    @media (max-width: 768px) {
+      .film:hover img {
+        transform: rotate(80deg); } }
   .film:hover::before {
     content: "";
     background-image: url(../images/index/accent.svg);
@@ -46,6 +49,12 @@ html {
     background-size: contain;
     vertical-align: middle;
     background-repeat: no-repeat; }
+    @media (max-width: 768px) {
+      .film:hover::before {
+        top: -40px;
+        left: 80px;
+        transform: rotate(80deg);
+        width: 50px; } }
 
 .film--3rd {
   opacity: 0.3;
