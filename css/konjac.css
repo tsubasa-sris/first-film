@@ -1,0 +1,14 @@
+body {
+  background-color: black; }
+
+.tweet {
+  margin: 30px auto;
+  width: 50%; }
+  .tweet img {
+    width: 100%;
+    height: auto; }
+  @media (max-width: 768px) {
+    .tweet {
+      width: 90%; } }
+
+/*# sourceMappingURL=konjac.css.map */
