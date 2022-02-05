@@ -1,3 +1,7 @@
+html {
+  font-family: sans-serif;
+}
+
 body {
   background-color: black;
 }
@@ -25,6 +29,6 @@ body {
     height: auto;
   }
   @media(max-width: 768px) {
-    width: 90%;
+    width: 95%;
   }
 }
