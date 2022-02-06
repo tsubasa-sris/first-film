@@ -13,32 +13,41 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://tsubasa-sris.github.io">
     <meta name="twitter:card" content="summary_large_image">
-    <meta property="og:image" content="https://tsubasa-sris.github.io/images/index/ogimage-index.png">
+    <meta property="og:image" content="https://tsubasa-sris.github.io/images/films/index/ogimage-index.png">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="../css/films/style.css">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="images/favicon-index.png">
+    <link rel="icon" type="image/x-icon" href="../images/films/film.png">
   </head>
 
   <body>
     <div class="films">
       <a href="first-film" class="film film--1st">
-        <img src="images/index/FUJI.svg" alt="FUJI first film">
+        <img src="../images/films/index/FUJI.svg" alt="FUJI first film">
         <p class="title">first film</p>
       </a>
       <a href="second-film" class="film film--2nd">
-        <img src="images/index/ILFORD.svg" alt="ILFORD second film">
+        <img src="../images/films/index/ILFORD.svg" alt="ILFORD second film">
         <p class="title">second film</p>
       </a>
       <a href="" class="film film--3rd">
-        <img src="images/index/kodak.svg" alt="WIP">
+        <img src="../images/films/index/kodak.svg" alt="WIP">
         <p class="title title--pc">work in progress</p>
         <p class="title title--sp">WIP</p>
       </a>
     </div>
-    <a href="randome-cat" class="cat">
-      🐈
-    </a>
+    <div class='switch'>
+      <label class='switch-label'>
+        <input id='js_mode_toggle' type='checkbox'/>
+        <div class='switch-mode' id='js_rotate'>
+          <span id='switch-mode-dark'>🌗</span>
+          <span id='switch-mode-light'>🌗</span>
+        </div>
+      </label>
+    </div>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="../js/film.js"></script>
   </body>
 </html>

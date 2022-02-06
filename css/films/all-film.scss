@@ -3,10 +3,66 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@700&display=swap');
 
+body {
+  background-color: var(--background-color);
+}
+
+:root {
+  --background-color: #000;
+  --film: #382518;
+  --text: #fff;
+  --holes: url(../../images/films/hole-dark.png);
+  --mode: #F8F6F3;
+}
+
+:root[data-theme-mode='light'] {
+  --background-color: #F8F6F3;
+  --film: #220D00;
+  --text: #000;
+  --holes: url(../../images/films/hole-light.png);
+  --mode: #000;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.switch {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--mode);
+  border-radius: 50%;
+  @media(max-width: 768px) {
+    display: none;
+  }
+}
+
+.switch-label {
+  cursor: pointer;
+  width: 25px;
+  overflow: hidden;
+  display: inline-block;
+  height: 25px;
+  padding: 13px;
+}
+
+.switch-mode {
+  font-size: 25px;
+}
+
+#switch-mode-light {
+  display: inline-block;
+}
+
+#switch-mode-dark {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
 html {
   font-size: 62.5%;
   font-family: 'Pathway Gothic One', sans-serif;
-  background-color: #F8F6F3;
 }
 
 .loading {
@@ -16,7 +72,6 @@ html {
   top: 0;
   left: 0;
   z-index: 9999;
-  // transition: all 1s;
   background-color: white;
   img {
     position: absolute;
@@ -35,7 +90,7 @@ html {
 
 .photos {
   width: 500px;
-  background-color: #220D00;
+  background-color: var(--film);
   margin: 30px auto;
   position: relative;
   text-align: center;
@@ -48,7 +103,7 @@ html {
 }
 
 .holes {
-  background-image: url(../images/hole-shadow.png);
+  background-image: var(--holes);
   width: 32px;
   height: 102%;
   background-size: contain;
@@ -67,6 +122,66 @@ html {
 }
 
 .fuji {
+  position: relative;
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-size: 16px;
+  color: #E0CB6E;
+  &::before {
+    content: "S-400";
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    transform: rotate(-90deg);
+  }
+  &::after {
+    content: "FUJI";
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    transform: rotate(-90deg);
+  }
+  @media(max-width: 768px) {
+    font-size: 12px;
+    &::before {
+      left: -6px;
+    }
+    &::after {
+      right: 0;
+    }
+  }
+}
+
+.fuji-2 {
+  position: relative;
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-size: 16px;
+  color: #E0CB6E;
+  &::before {
+    content: "FUJI";
+    position: absolute;
+    top: 50%;
+    left: -5px;
+    transform: rotate(-90deg);
+  }
+  &::after {
+    content: "S-400";
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    transform: rotate(-90deg);
+  }
+  @media(max-width: 768px) {
+    font-size: 12px;
+    &::before {
+      left: 0;
+    }
+    &::after {
+      right: -6px;
+    }
+  }
+}
+
+.ilford {
   position: relative;
   font-family: 'Bai Jamjuree', sans-serif;
   font-size: 16px;
@@ -96,7 +211,7 @@ html {
   }
 }
 
-.fuji-2 {
+.ilford-2 {
   position: relative;
   font-family: 'Bai Jamjuree', sans-serif;
   font-size: 16px;
@@ -482,12 +597,44 @@ html {
   }
 }
 
+.index {
+  background: black;
+  height: 100vh;
+  padding: 32px;
+  box-sizing: border-box;
+  a {
+    width: 100%;
+    font-size: 20px;
+    color: white;
+    font-family: 'Nanum Myeongjo', serif;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+  }
+}
+
+.giphy {
+  margin: 0 auto 32px;;
+  height: 400px;
+  width: 100%;
+  max-height: 400px;
+  iframe {
+    width: 100%;
+    max-height: inherit;
+    margin-bottom: 32px;
+  }
+  @media(max-width: 768px) {
+    width: 100%;
+    height: 500px;
+  }
+}
+
 .link {
   text-align: center;
   margin: 32px;
   font-size: 20px;
   text-decoration: none;
   display: block;
-  color: black;
+  color: var(--text);
   font-family: 'Nanum Myeongjo', serif;
 }
