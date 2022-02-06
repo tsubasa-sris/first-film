@@ -16,29 +16,59 @@
     <meta property="og:image" content="https://tsubasa-sris.github.io/images/index/ogimage-index.png">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="images/favicon-index.png">
   </head>
 
   <body>
-    <div class="films">
-      <a href="first-film" class="film film--1st">
-        <img src="images/index/FUJI.svg" alt="FUJI first film">
-        <p class="title">first film</p>
-      </a>
-      <a href="second-film" class="film film--2nd">
-        <img src="images/index/ILFORD.svg" alt="ILFORD second film">
-        <p class="title">second film</p>
-      </a>
-      <a href="" class="film film--3rd">
-        <img src="images/index/kodak.svg" alt="WIP">
-        <p class="title title--pc">work in progress</p>
-        <p class="title title--sp">WIP</p>
-      </a>
+    <div class="intro">
+      <h1>tsubasa-sris.github.io</h1>
+      <p>
+        普段はwebとアプリのデザイナをしています。
+        <br>
+        趣味で製作したものたちを展示しています。
+      </p>
     </div>
-    <a href="randome-cat" class="cat">
-      🐈
-    </a>
+    <div>
+      <ul class="works">
+        <a href="films/"class="thubm-nail">
+          <img src="images/films.png" alt="film photos">
+        </a>
+        <a target="_blank" href="https://www.figma.com/proto/b2d01jQJ7th5T0PLE3TCmR/Blender-works?page-id=0%3A1&node-id=18%3A23&viewport=241%2C48%2C0.16&scaling=scale-down-width&starting-point-node-id=18%3A23&hotspot-hints=0&disable-default-keyboard-nav=1&hide-ui=1" class="thubm-nail">
+          <img src="images/blender.png" alt="bledner works">
+        </a>
+        <a href="konjac/" class="thubm-nail">
+          <img src="images/tweet.png" alt="some random tweets">
+        </a>
+        <div class="thubm-nail">
+          <div class="links">
+            <ul class="link">
+              <a target="_blank" href="https://twitter.com/tsubasa_sris">
+                <i class="fab fa-twitter" aria-hidden="true"></i>
+              </a>
+              <a target="_blank" href="https://www.instagram.com/tbs_sris/">
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+              </a>
+              <a target="_blank" href="https://tsubasashiraishi.medium.com/">
+                <i class="fab fa-medium" aria-hidden="true"></i>
+              </a>
+            </ul>
+          </div>
+        </div>
+      </ul>
+    </div>
+    <div class='switch'>
+      <label class='switch-label'>
+        <input id='js_mode_toggle' type='checkbox'/>
+        <div class='switch-mode' id='js_rotate'>
+          <span id='switch-mode-dark'>🌗</span>
+          <span id='switch-mode-light'>🌗</span>
+        </div>
+      </label>
+    </div>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="js/film.js"></script>
   </body>
 </html>
