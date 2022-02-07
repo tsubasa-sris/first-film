@@ -8,13 +8,54 @@ body {
   --text: #fff;
   --mode: #F8F6F3;
   --accent: url(../../images/films/index/accent-light.svg);
+  --house: url(../../images/films/house.svg);
 }
 
 :root[data-theme-mode='light'] {
   --background-color: #F8F6F3;
   --text: #000;
-  --mode: #000;
+  --mode: #163016;
   --accent: url(../../images/films/index/accent-dark.svg);
+  --house: url(../../images/films/house-light.svg);
+}
+
+.links {
+  margin: 50px auto;
+  text-align: center;
+  display: flex;
+  width: 120px;
+  justify-content: space-between;
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--text);
+  }
+}
+
+.house-icon {
+  width: 28px;
+  background-image: var(--house);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  img {
+    width: 100%;
+    height: auto;
+  }
+  @media(max-width: 768px) {
+    width: 20px;
+  }
+}
+
+.border {
+  border-right: 1.5px solid var(--text);
+}
+
+.insta-icon {
+  font-size: 32px;
+  @media(max-width: 768px) {
+    font-size: 24px;
+  }
 }
 
 input[type="checkbox"] {
@@ -59,7 +100,7 @@ html {
 .films {
   display: flex;
   justify-content: center;
-  height: 100vh;
+  height: 70vh;
   align-items: center;
   text-align: center;
   margin-left: 27px;

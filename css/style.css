@@ -2,12 +2,12 @@
 :root {
   --background-color: #353232;
   --text: #fff;
-  --mode: #F8F8F8; }
+  --mode: rgba(248, 248, 248, 0.8); }
 
 :root[data-theme-mode='light'] {
   --background-color: #F8F8F8;
   --text: #000;
-  --mode: #353232; }
+  --mode: rgba(53, 50, 48, 0.8); }
 
 body {
   background: var(--background-color); }
@@ -31,14 +31,17 @@ body {
 
 .works {
   display: flex;
-  margin: auto;
-  width: 70vw;
+  margin: 0 auto 120px;
+  max-width: 800px;
+  min-width: 700px;
+  padding: 15px;
   justify-content: space-between;
   flex-wrap: wrap; }
   @media (max-width: 768px) {
     .works {
       display: block;
-      width: 85%; } }
+      min-width: 85%;
+      margin: 0 auto 16px; } }
 
 .thubm-nail {
   width: 48%;
@@ -50,6 +53,9 @@ body {
     border-radius: 8px;
     border: #B5B5B5 solid 1px;
     box-shadow: 4px 8px 10px 0px rgba(0, 0, 0, 0.2); }
+  .thubm-nail img:hover {
+    opacity: 0.6;
+    transition: 0.3s ease; }
   @media (max-width: 768px) {
     .thubm-nail {
       width: 100%;
@@ -60,7 +66,7 @@ body {
   height: 100%; }
   @media (max-width: 768px) {
     .links {
-      padding: 80px 0 150px; } }
+      padding: 60px 0 60px; } }
 
 .link {
   display: flex;
@@ -71,6 +77,9 @@ body {
   .link a {
     text-decoration: none;
     color: var(--text); }
+  .link a:hover {
+    opacity: 0.5;
+    transition: 0.3s ease; }
   @media (max-width: 768px) {
     .link {
       margin: auto 0; } }
@@ -102,5 +111,31 @@ input[type="checkbox"] {
 #switch-mode-dark {
   display: inline-block;
   margin-bottom: 15px; }
+
+.cat {
+  font-size: 32px;
+  position: sticky;
+  bottom: 0;
+  left: 26px;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none; }
+  @media (max-width: 768px) {
+    .cat {
+      position: static;
+      margin-left: 16px; } }
+  .cat .heart {
+    display: none;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 5px;
+    color: white; }
+
+.cat:hover .heart {
+  display: block;
+  transition: 0.3 ease; }
+  @media (max-width: 768px) {
+    .cat:hover .heart {
+      display: none; } }
 
 /*# sourceMappingURL=style.css.map */
