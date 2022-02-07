@@ -30,6 +30,9 @@ body {
     text-decoration: none;
     color: var(--text);
   }
+  @media(max-width: 768px) {
+    margin: 25px auto;
+  }
 }
 
 .house-icon {
@@ -107,6 +110,7 @@ html {
   @media(max-width: 768px) {
     flex-direction: column;
     margin: 0;
+    height: 85vh
   }
 }
 
