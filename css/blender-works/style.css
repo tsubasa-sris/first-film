@@ -8,13 +8,25 @@ body {
   background-size: 40.3px;
   background-position: center; }
 
+.links {
+  margin: 0 auto 80px;
+  text-align: center;
+  width: 100px; }
+
+.house-icon {
+  width: 35px;
+  display: inline-block; }
+  .house-icon img {
+    width: 100%;
+    height: auto; }
+
 .title {
   background-color: #F6F6F6;
   width: 321px;
   text-align: center;
   margin: auto;
-  height: 119.8px;
-  margin-top: 40.85px;
+  height: 118.8px;
+  margin-top: 47.8px;
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -31,7 +43,7 @@ body {
   margin-top: 8px; }
 
 .collections {
-  margin: 50px auto 80px;
+  margin: 50px auto 50px;
   width: 640px; }
   @media (max-width: 768px) {
     .collections {
