@@ -8,7 +8,7 @@ function loadAnimation(loader) {
     renderer: "svg",
     loop: false,
     autoplay: false,
-    path: "../images/intro.json"
+    path: "../images/json/intro.json"
   });
   loader.addEventListener("mouseenter", function() {
     animation.setDirection(1);
@@ -37,7 +37,7 @@ function loadAnimation(loader) {
     renderer: "svg",
     loop: false,
     autoplay: false,
-    path: "../images/blender.json"
+    path: "../images/json/blender.json"
   });
   loader.addEventListener("mouseenter", function() {
     animation.setDirection(1);
@@ -66,7 +66,7 @@ function loadAnimation(loader) {
     renderer: "svg",
     loop: false,
     autoplay: false,
-    path: "../images/photos.json"
+    path: "../images/json/photos.json"
   });
   loader.addEventListener("mouseenter", function() {
     animation.setDirection(1);
