@@ -1,35 +1,42 @@
-@import "https://fonts.googleapis.com/css?family=Pathway+Gothic+One";
+@import 'https://fonts.googleapis.com/css?family=Pathway+Gothic+One';
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@700&display=swap");
 body {
-  background-color: var(--background-color); }
+  background-color: var(--background-color);
+}
 
 :root {
   --background-color: #000;
   --film: #382518;
   --text: #fff;
   --holes: url(../../images/films/hole-dark.png);
-  --mode: #F8F6F3; }
+  --mode: #F8F6F3;
+}
 
-:root[data-theme-mode='light'] {
+:root[data-theme-mode=light] {
   --background-color: #F8F6F3;
   --film: #220D00;
   --text: #000;
   --holes: url(../../images/films/hole-light.png);
-  --mode: #000; }
+  --mode: #000;
+}
 
-input[type="checkbox"] {
-  display: none; }
+input[type=checkbox] {
+  display: none;
+}
 
 .switch {
   position: fixed;
   bottom: 30px;
   right: 30px;
   background: var(--mode);
-  border-radius: 50%; }
-  @media (max-width: 768px) {
-    .switch {
-      display: none; } }
+  border-radius: 50%;
+}
+@media (max-width: 768px) {
+  .switch {
+    display: none;
+  }
+}
 
 .switch-label {
   cursor: pointer;
@@ -37,21 +44,26 @@ input[type="checkbox"] {
   overflow: hidden;
   display: inline-block;
   height: 25px;
-  padding: 13px; }
+  padding: 13px;
+}
 
 .switch-mode {
-  font-size: 25px; }
+  font-size: 25px;
+}
 
 #switch-mode-light {
-  display: inline-block; }
+  display: inline-block;
+}
 
 #switch-mode-dark {
   display: inline-block;
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+}
 
 html {
   font-size: 62.5%;
-  font-family: 'Pathway Gothic One', sans-serif; }
+  font-family: "Pathway Gothic One", sans-serif;
+}
 
 .loading {
   width: 100vw;
@@ -60,18 +72,21 @@ html {
   top: 0;
   left: 0;
   z-index: 9999;
-  background-color: var(--background-color); }
-  .loading img {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto; }
+  background-color: var(--background-color);
+}
+.loading img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
 
 .loaded {
   opacity: 0;
-  visibility: hidden; }
+  visibility: hidden;
+}
 
 .photos {
   width: 500px;
@@ -81,10 +96,13 @@ html {
   text-align: center;
   opacity: 0.95;
   overflow: hidden;
-  box-shadow: 7px 7px 7px 0 rgba(0, 0, 0, 0.3); }
-  @media (max-width: 768px) {
-    .photos {
-      width: 350px; } }
+  box-shadow: 7px 7px 7px 0 rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 768px) {
+  .photos {
+    width: 350px;
+  }
+}
 
 .holes {
   background-image: var(--holes);
@@ -93,311 +111,398 @@ html {
   background-size: contain;
   background-repeat-y: repeat;
   position: absolute;
-  top: -10px; }
-  .holes.--left {
-    left: 26px; }
-  .holes.--right {
-    right: 26px; }
-  @media (max-width: 768px) {
-    .holes {
-      width: 25px; } }
+  top: -10px;
+}
+.holes.--left {
+  left: 26px;
+}
+.holes.--right {
+  right: 26px;
+}
+@media (max-width: 768px) {
+  .holes {
+    width: 25px;
+  }
+}
 
 .fuji {
   position: relative;
-  font-family: 'Bai Jamjuree', sans-serif;
+  font-family: "Bai Jamjuree", sans-serif;
   font-size: 16px;
-  color: #E0CB6E; }
+  color: #E0CB6E;
+}
+.fuji::before {
+  content: "S-400";
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  transform: rotate(-90deg);
+}
+.fuji::after {
+  content: "FUJI";
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  transform: rotate(-90deg);
+}
+@media (max-width: 768px) {
+  .fuji {
+    font-size: 12px;
+  }
   .fuji::before {
-    content: "S-400";
-    position: absolute;
-    top: 50%;
-    left: -10px;
-    transform: rotate(-90deg); }
+    left: -6px;
+  }
   .fuji::after {
-    content: "FUJI";
-    position: absolute;
-    top: 50%;
-    right: -5px;
-    transform: rotate(-90deg); }
-  @media (max-width: 768px) {
-    .fuji {
-      font-size: 12px; }
-      .fuji::before {
-        left: -6px; }
-      .fuji::after {
-        right: 0; } }
+    right: 0;
+  }
+}
 
 .fuji-2 {
   position: relative;
-  font-family: 'Bai Jamjuree', sans-serif;
+  font-family: "Bai Jamjuree", sans-serif;
   font-size: 16px;
-  color: #E0CB6E; }
+  color: #E0CB6E;
+}
+.fuji-2::before {
+  content: "FUJI";
+  position: absolute;
+  top: 50%;
+  left: -5px;
+  transform: rotate(-90deg);
+}
+.fuji-2::after {
+  content: "S-400";
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  transform: rotate(-90deg);
+}
+@media (max-width: 768px) {
+  .fuji-2 {
+    font-size: 12px;
+  }
   .fuji-2::before {
-    content: "FUJI";
-    position: absolute;
-    top: 50%;
-    left: -5px;
-    transform: rotate(-90deg); }
+    left: 0;
+  }
   .fuji-2::after {
-    content: "S-400";
-    position: absolute;
-    top: 50%;
-    right: -10px;
-    transform: rotate(-90deg); }
-  @media (max-width: 768px) {
-    .fuji-2 {
-      font-size: 12px; }
-      .fuji-2::before {
-        left: 0; }
-      .fuji-2::after {
-        right: -6px; } }
+    right: -6px;
+  }
+}
 
 .ilford {
   position: relative;
-  font-family: 'Bai Jamjuree', sans-serif;
+  font-family: "Bai Jamjuree", sans-serif;
   font-size: 16px;
-  color: #E0CB6E; }
+  color: #E0CB6E;
+}
+.ilford::before {
+  content: "HP5 PLUS";
+  position: absolute;
+  top: 50%;
+  left: -25px;
+  transform: rotate(-90deg);
+}
+.ilford::after {
+  content: "ILFORD";
+  position: absolute;
+  top: 50%;
+  right: -15px;
+  transform: rotate(-90deg);
+}
+@media (max-width: 768px) {
+  .ilford {
+    font-size: 12px;
+  }
   .ilford::before {
-    content: "HP5 PLUS";
-    position: absolute;
-    top: 50%;
-    left: -25px;
-    transform: rotate(-90deg); }
+    left: -15px;
+  }
   .ilford::after {
-    content: "ILFORD";
-    position: absolute;
-    top: 50%;
-    right: -15px;
-    transform: rotate(-90deg); }
-  @media (max-width: 768px) {
-    .ilford {
-      font-size: 12px; }
-      .ilford::before {
-        left: -15px; }
-      .ilford::after {
-        right: -10px; } }
+    right: -10px;
+  }
+}
 
 .ilford-2 {
   position: relative;
-  font-family: 'Bai Jamjuree', sans-serif;
+  font-family: "Bai Jamjuree", sans-serif;
   font-size: 16px;
-  color: #E0CB6E; }
+  color: #E0CB6E;
+}
+.ilford-2::before {
+  content: "HP5 PLUS";
+  position: absolute;
+  top: 50%;
+  left: -25px;
+  transform: rotate(-90deg);
+}
+.ilford-2::after {
+  content: "ILFORD";
+  position: absolute;
+  top: 50%;
+  right: -15px;
+  transform: rotate(-90deg);
+}
+@media (max-width: 768px) {
+  .ilford-2 {
+    font-size: 12px;
+  }
   .ilford-2::before {
-    content: "HP5 PLUS";
-    position: absolute;
-    top: 50%;
-    left: -25px;
-    transform: rotate(-90deg); }
+    left: -15px;
+  }
   .ilford-2::after {
-    content: "ILFORD";
-    position: absolute;
-    top: 50%;
-    right: -15px;
-    transform: rotate(-90deg); }
-  @media (max-width: 768px) {
-    .ilford-2 {
-      font-size: 12px; }
-      .ilford-2::before {
-        left: -15px; }
-      .ilford-2::after {
-        right: -10px; } }
+    right: -10px;
+  }
+}
 
 .photo {
   width: 360px;
   height: auto;
   margin: 8px auto;
-  font-family: 'Bai Jamjuree', sans-serif;
+  font-family: "Bai Jamjuree", sans-serif;
   font-size: 16px;
   color: #E0CB6E;
   position: relative;
   display: inline-block;
-  cursor: pointer; }
-  .photo img {
-    width: 100%;
-    height: auto;
-    opacity: 0.3; }
-  .photo img:hover {
-    opacity: 1; }
-  @media (max-width: 768px) {
-    .photo {
-      font-size: 12px;
-      width: 230px; } }
+  cursor: pointer;
+}
+.photo img {
+  width: 100%;
+  height: auto;
+  opacity: 0.3;
+}
+.photo img:hover {
+  opacity: 1;
+}
+@media (max-width: 768px) {
+  .photo {
+    font-size: 12px;
+    width: 230px;
+  }
+}
 
 .photo--1 {
-  padding-top: 16px; }
+  padding-top: 16px;
+}
+.photo--1::before {
+  content: "1";
+  position: absolute;
+  top: 50%;
+  left: -60px;
+  transform: rotate(-90deg);
+}
+.photo--1::after {
+  content: "1";
+  position: absolute;
+  top: 50%;
+  right: -60px;
+  transform: rotate(-90deg);
+}
+@media (max-width: 768px) {
   .photo--1::before {
-    content: "1";
-    position: absolute;
-    top: 50%;
-    left: -60px;
-    transform: rotate(-90deg); }
+    left: -50px;
+  }
   .photo--1::after {
-    content: "1";
-    position: absolute;
-    top: 50%;
-    right: -60px;
-    transform: rotate(-90deg); }
-  @media (max-width: 768px) {
-    .photo--1::before {
-      left: -50px; }
-    .photo--1::after {
-      right: -50px; } }
+    right: -50px;
+  }
+}
 
 .photo--2::before {
   content: "2";
   position: absolute;
   top: 50%;
   left: -60px;
-  transform: rotate(-90deg); }
+  transform: rotate(-90deg);
+}
 .photo--2::after {
   content: "2";
   position: absolute;
   top: 50%;
   right: -60px;
-  transform: rotate(-90deg); }
+  transform: rotate(-90deg);
+}
 @media (max-width: 768px) {
   .photo--2::before {
-    left: -50px; }
+    left: -50px;
+  }
   .photo--2::after {
-    right: -50px; } }
+    right: -50px;
+  }
+}
 
 .photo--3::before {
   content: "3";
   position: absolute;
   top: 50%;
   left: -60px;
-  transform: rotate(-90deg); }
+  transform: rotate(-90deg);
+}
 .photo--3::after {
   content: "3";
   position: absolute;
   top: 50%;
   right: -60px;
-  transform: rotate(-90deg); }
+  transform: rotate(-90deg);
+}
 @media (max-width: 768px) {
   .photo--3::before {
-    left: -50px; }
+    left: -50px;
+  }
   .photo--3::after {
-    right: -50px; } }
+    right: -50px;
+  }
+}
 
 .photo--4::before {
   content: "4";
   position: absolute;
   top: 50%;
   left: -60px;
-  transform: rotate(-90deg); }
+  transform: rotate(-90deg);
+}
 .photo--4::after {
   content: "4";
   position: absolute;
   top: 50%;
   right: -60px;
-  transform: rotate(-90deg); }
+  transform: rotate(-90deg);
+}
 @media (max-width: 768px) {
   .photo--4::before {
-    left: -50px; }
+    left: -50px;
+  }
   .photo--4::after {
-    right: -50px; } }
+    right: -50px;
+  }
+}
 
 .photo--5::before {
   content: "5";
   position: absolute;
   top: 50%;
   left: -60px;
-  transform: rotate(-90deg); }
+  transform: rotate(-90deg);
+}
 .photo--5::after {
   content: "5";
   position: absolute;
   top: 50%;
   right: -60px;
-  transform: rotate(-90deg); }
+  transform: rotate(-90deg);
+}
 @media (max-width: 768px) {
   .photo--5::before {
-    left: -50px; }
+    left: -50px;
+  }
   .photo--5::after {
-    right: -50px; } }
+    right: -50px;
+  }
+}
 
 .photo--6::before {
   content: "6";
   position: absolute;
   top: 50%;
   left: -60px;
-  transform: rotate(-90deg); }
+  transform: rotate(-90deg);
+}
 .photo--6::after {
   content: "6";
   position: absolute;
   top: 50%;
   right: -60px;
-  transform: rotate(-90deg); }
+  transform: rotate(-90deg);
+}
 @media (max-width: 768px) {
   .photo--6::before {
-    left: -50px; }
+    left: -50px;
+  }
   .photo--6::after {
-    right: -50px; } }
+    right: -50px;
+  }
+}
 
 .photo--7::before {
   content: "7";
   position: absolute;
   top: 50%;
   left: -60px;
-  transform: rotate(-90deg); }
+  transform: rotate(-90deg);
+}
 .photo--7::after {
   content: "7";
   position: absolute;
   top: 50%;
   right: -60px;
-  transform: rotate(-90deg); }
+  transform: rotate(-90deg);
+}
 @media (max-width: 768px) {
   .photo--7::before {
-    left: -50px; }
+    left: -50px;
+  }
   .photo--7::after {
-    right: -50px; } }
+    right: -50px;
+  }
+}
 
 .photo--8::before {
   content: "8";
   position: absolute;
   top: 50%;
   left: -60px;
-  transform: rotate(-90deg); }
+  transform: rotate(-90deg);
+}
 .photo--8::after {
   content: "8";
   position: absolute;
   top: 50%;
   right: -60px;
-  transform: rotate(-90deg); }
+  transform: rotate(-90deg);
+}
 @media (max-width: 768px) {
   .photo--8::before {
-    left: -50px; }
+    left: -50px;
+  }
   .photo--8::after {
-    right: -50px; } }
+    right: -50px;
+  }
+}
 
 .photo--9::before {
   content: "9";
   position: absolute;
   top: 50%;
   left: -60px;
-  transform: rotate(-90deg); }
+  transform: rotate(-90deg);
+}
 .photo--9::after {
   content: "9";
   position: absolute;
   top: 50%;
   right: -60px;
-  transform: rotate(-90deg); }
+  transform: rotate(-90deg);
+}
 @media (max-width: 768px) {
   .photo--9::before {
-    left: -50px; }
+    left: -50px;
+  }
   .photo--9::after {
-    right: -50px; } }
+    right: -50px;
+  }
+}
 
 .credit {
   display: inline-block;
   font-size: 20px;
   margin: 28px 0;
   color: white;
-  font-family: 'Nanum Myeongjo', serif;
-  cursor: pointer; }
-  @media (max-width: 768px) {
-    .credit {
-      font-size: 18px;
-      margin: 18px 0; } }
+  font-family: "Nanum Myeongjo", serif;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .credit {
+    font-size: 18px;
+    margin: 18px 0;
+  }
+}
 
 .modal {
   display: none;
@@ -407,7 +512,8 @@ html {
   width: 100%;
   left: 0;
   right: 0;
-  z-index: 1; }
+  z-index: 1;
+}
 
 .modal__bg {
   background: rgba(0, 0, 0, 0.95);
@@ -415,14 +521,15 @@ html {
   position: absolute;
   width: 100%;
   display: block;
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 .modal__content {
   left: 0;
   right: 0;
   margin: auto;
   position: absolute;
-  font-family: 'Nanum Myeongjo', serif;
+  font-family: "Nanum Myeongjo", serif;
   color: white;
   font-size: 16px;
   flex-flow: column;
@@ -433,25 +540,33 @@ html {
   height: 70%;
   box-sizing: border-box;
   justify-content: center;
-  width: fit-content; }
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.modal__content img {
+  width: auto;
+  height: 100%;
+  display: block;
+  margin-bottom: 32px;
+}
+.modal__content h1 {
+  display: inline-block;
+  margin-bottom: 40px;
+}
+.modal__content a {
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+@media (max-width: 415px) {
+  .modal__content {
+    padding: 16px;
+  }
   .modal__content img {
-    width: auto;
-    height: 100%;
-    display: block;
-    margin-bottom: 32px; }
-  .modal__content h1 {
-    display: inline-block;
-    margin-bottom: 40px; }
-  .modal__content a {
-    display: block;
-    text-decoration: none;
-    color: white; }
-  @media (max-width: 415px) {
-    .modal__content {
-      padding: 16px; }
-      .modal__content img {
-        height: auto;
-        width: 100%; } }
+    height: auto;
+    width: 100%;
+  }
+}
 
 .modal__content-credit {
   position: absolute;
@@ -461,52 +576,65 @@ html {
   color: black;
   line-height: 22px;
   width: 60%;
-  background: white; }
-  .modal__content-credit .text {
-    margin-bottom: 48px; }
-  .modal__content-credit h1 {
-    color: #8C5454;
-    padding: 0px 0px 12px 0;
-    margin-bottom: 0; }
-  .modal__content-credit .sns {
-    margin: 0 0 40px; }
-  .modal__content-credit a {
-    color: #000;
-    display: block;
-    padding-top: 0; }
-  @media (max-width: 768px) {
-    .modal__content-credit {
-      width: 80%;
-      top: 30%;
-      bottom: none; } }
+  background: white;
+}
+.modal__content-credit .text {
+  margin-bottom: 48px;
+}
+.modal__content-credit h1 {
+  color: #8C5454;
+  padding: 0px 0px 12px 0;
+  margin-bottom: 0;
+}
+.modal__content-credit .sns {
+  margin: 0 0 40px;
+}
+.modal__content-credit a {
+  color: #000;
+  display: block;
+  padding-top: 0;
+}
+@media (max-width: 768px) {
+  .modal__content-credit {
+    width: 80%;
+    top: 30%;
+    bottom: none;
+  }
+}
 
 .index {
   background: black;
   height: 100vh;
   padding: 32px;
-  box-sizing: border-box; }
-  .index a {
-    width: 100%;
-    font-size: 20px;
-    color: white;
-    font-family: 'Nanum Myeongjo', serif;
-    text-decoration: none;
-    display: inline-block;
-    text-align: center; }
+  box-sizing: border-box;
+}
+.index a {
+  width: 100%;
+  font-size: 20px;
+  color: white;
+  font-family: "Nanum Myeongjo", serif;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
 
 .giphy {
   margin: 0 auto 32px;
   height: 400px;
   width: 100%;
-  max-height: 400px; }
-  .giphy iframe {
+  max-height: 400px;
+}
+.giphy iframe {
+  width: 100%;
+  max-height: inherit;
+  margin-bottom: 32px;
+}
+@media (max-width: 768px) {
+  .giphy {
     width: 100%;
-    max-height: inherit;
-    margin-bottom: 32px; }
-  @media (max-width: 768px) {
-    .giphy {
-      width: 100%;
-      height: 500px; } }
+    height: 500px;
+  }
+}
 
 .link {
   text-align: center;
@@ -515,6 +643,5 @@ html {
   text-decoration: none;
   display: block;
   color: var(--text);
-  font-family: 'Nanum Myeongjo', serif; }
-
-/*# sourceMappingURL=all-film.css.map */
+  font-family: "Nanum Myeongjo", serif;
+}/*# sourceMappingURL=all-film.css.map */

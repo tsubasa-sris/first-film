@@ -20,7 +20,7 @@ window.addEventListener("DOMContentLoaded", () => {
   openModalBtns.forEach((openModalBtn) => {
     openModalBtn.addEventListener("click", () => {
       // data-modalで設定したスライド番号を取得
-      const modalIndex = openModalBtn.getAttribute('data-modal');
+      const modalIndex = openModalBtn.getAttribute("data-modal");
       swiper.slideTo(modalIndex);
       modal.classList.add("is-active");
     });
@@ -34,20 +34,11 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// function draggable(target) {
-//   target.onmousedown = function() {
-//     document.onmousemove = mouseMove;
-//   };
-//   document.onmouseup = function() {
-//     document.onmousemove = null;
-//   };
-//   function mouseMove(e) {
-//     var event = e ? e : window.event;
-//     target.style.top = event.clientY + 'px';
-//     target.style.left = event.clientX + 'px';
-//   }
-// }
-//
-// draggable(document.getElementById('room1'));
-// draggable(document.getElementById('room2'));
-// draggable(document.getElementById('room3'));
+function Time() {
+  var realTime = new Date();
+  var hour = realTime.getHours();
+  var minutes = realTime.getMinutes();
+  var text = hour + ":" + minutes;
+  document.getElementById("real-time").innerHTML = text;
+}
+setInterval("Time()", 1000);

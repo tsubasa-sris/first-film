@@ -2,13 +2,15 @@
 :root {
   --background-color: #353232;
   --text: #fff;
-  --mode: rgba(248, 248, 248, 0.8); }
+  --mode: rgba(248, 248, 248, 0.8);
+}
 
 body {
   background-image: url("../images/background.png");
   background-size: cover;
-  font-family: 'Press Start 2P', cursive;
-  color: #10924A; }
+  font-family: "Press Start 2P", cursive;
+  color: #10924A;
+}
 
 .all {
   position: absolute;
@@ -17,27 +19,37 @@ body {
   right: 0;
   left: 0;
   margin: auto;
-  height: fit-content; }
-  @media (max-width: 768px) {
-    .all {
-      position: static; } }
+  height: -moz-fit-content;
+  height: fit-content;
+}
+@media (max-width: 768px) {
+  .all {
+    position: static;
+  }
+}
 
 .intro {
-  text-align: center; }
+  text-align: center;
+}
+.intro .main {
+  font-size: 56px;
+  margin-bottom: 16px;
+  position: relative;
+}
+.intro .main .sub {
+  font-size: 26px;
+  position: absolute;
+  right: 5px;
+  bottom: -30px;
+}
+@media (max-width: 768px) {
+  .intro {
+    margin: 48px auto 12px;
+  }
   .intro .main {
-    font-size: 56px;
-    margin-bottom: 16px;
-    position: relative; }
-    .intro .main .sub {
-      font-size: 26px;
-      position: absolute;
-      right: 5px;
-      bottom: -30px; }
-  @media (max-width: 768px) {
-    .intro {
-      margin: 48px auto 12px; }
-      .intro .main {
-        font-size: 40px; } }
+    font-size: 40px;
+  }
+}
 
 .works {
   display: flex;
@@ -45,37 +57,47 @@ body {
   justify-content: space-between;
   text-align: center;
   width: 550px;
-  gap: 100px; }
-  .works a {
-    text-decoration: none;
-    color: #10924A; }
-  .works p {
-    margin-top: 12px; }
+  gap: 100px;
+}
+.works a {
+  text-decoration: none;
+  color: #10924A;
+}
+.works p {
+  margin-top: 12px;
+}
+.works img {
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 768px) {
+  .works {
+    display: block;
+    width: auto;
+    margin: 86px auto 0;
+  }
   .works img {
-    width: 100%;
-    height: auto; }
-  @media (max-width: 768px) {
-    .works {
-      display: block;
-      width: auto;
-      margin: 86px auto 0; }
-      .works img {
-        width: 120px; }
-      .works a {
-        display: block;
-        margin: 0 auto 56px;
-        width: 130px; } }
+    width: 120px;
+  }
+  .works a {
+    display: block;
+    margin: 0 auto 56px;
+    width: 130px;
+  }
+}
 
 .links {
   display: flex;
   justify-content: center;
   font-size: 48px;
-  gap: 64px; }
-  .links a {
-    text-decoration: none;
-    color: #10924A; }
-  @media (max-width: 768px) {
-    .links {
-      padding: 60px 0 60px; } }
-
-/*# sourceMappingURL=style.css.map */
+  gap: 64px;
+}
+.links a {
+  text-decoration: none;
+  color: #10924A;
+}
+@media (max-width: 768px) {
+  .links {
+    padding: 60px 0 60px;
+  }
+}/*# sourceMappingURL=style.css.map */
