@@ -163,11 +163,16 @@ body {
 }
 
 .career__time::after {
-  content: "●";
+  content: "";
+  background-image: url(../../images/intro/dot.svg);
   position: absolute;
-  left: -42px;
-  top: -4px;
+  left: -38px;
+  top: 0px;
   font-size: 34px;
+  height: 27px;
+  width: 27px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .career__window {
