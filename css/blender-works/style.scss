@@ -1,15 +1,15 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&family=Press+Start+2P&family=Revalia&family=Roboto+Mono:wght@400;500&display=swap");
 
 html {
   font-size: 62.5%;
-  font-family: 'EB Garamond', serif;
+  font-family: "EB Garamond", serif;
 }
 
 body {
-  background-image: url(../../images/blender-works/background.png);
-  background-size: 40.3px;
-  background-position: center;
+  background-color: #3a6ea5;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .links {
@@ -21,6 +21,8 @@ body {
 .house-icon {
   width: 35px;
   display: inline-block;
+  margin-top: 56px;
+  margin-bottom: 16px;
   img {
     width: 100%;
     height: auto;
@@ -28,80 +30,227 @@ body {
 }
 
 .title {
-  background-color: #F6F6F6;
-  width: 321px;
+  font-family: "Press Start 2P", cursive;
+  font-size: 28px;
+  margin-top: 24px;
+  margin-bottom: 32px;
   text-align: center;
-  margin: auto;
-  height: 118.8px;
-  margin-top: 47.8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  @media(max-width: 768px) {
-    margin-top: 34.85px;
-    width: 90%;
+  box-sizing: border-box;
+  color: #fff;
+  @media (max-width: 768px) {
+    font-size: 24px;
   }
-}
-
-.title__main {
-  font-size: 32px;
-}
-
-.title__name {
-  font-size: 17px;
-  margin-top: 8px;
-}
-
-.collections {
-  margin: 50px auto 50px;
-  width: 640px;
-  @media(max-width: 768px) {
-    width: 90%;
-  }
-}
-
-.collection {
-  display: inline-flex;
-  justify-content: space-between;
-  margin-top: 16px;
-  width: 100%;
-  @media(max-width: 768px) {
-    flex-direction: column;
-  }
-}
-
-.collection:first-child {
-  margin-top: 0;
 }
 
 .image {
-  margin: 0 10px;
-  width: 100%;
+  cursor: pointer;
+  text-align: center;
   img {
-    width: 100px;
-    height: auto;
+    border: 3px solid #fff;
+    height: 100px;
+    width: fit-content;
+    // filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.3));
   }
-  @media(max-width: 768px) {
-    margin: 0;
-  }
-}
-
-.image--room {
-  width: 190px;
-  @media(max-width: 768px) {
-    width: 100%;
-    margin-bottom: 16px;
+  p {
+    color: #fff;
+    margin-top: 8px;
+    // filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.3));
+    font-family: "DotGothic16", sans-serif;
+    font-size: 14px;
   }
 }
 
-.image--flex {
-  @media(max-width: 768px) {
-    margin-bottom: 16px;
+.footer {
+  height: 35px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #d4d0c8;
+  border-top: 1px solid #515151;
+  font-family: "Press Start 2P", cursive;
+  color: #515151;
+}
+
+.home {
+  color: #515151;
+  position: absolute;
+  top: 0;
+  padding: 8px 8px;
+  bottom: 0;
+  left: 8px;
+  box-sizing: border-box;
+  height: fit-content;
+  border-radius: 1px;
+  margin: auto;
+  border-bottom: 2px solid #6f6f6f;
+  border-right: 2px solid #6f6f6f;
+  border-top: 1px solid #bcbcbc;
+  border-left: 1px solid #bcbcbc;
+  text-decoration: none;
+  &:hover {
+    border-top: 2px solid #6f6f6f;
+    border-left: 2px solid #6f6f6f;
+    border-bottom: 1px solid #bcbcbc;
+    border-right: 0;
+    background-color: #c3c3c3;
   }
 }
 
-.image--flex:last-child {
-  @media(max-width: 768px) {
-    margin-bottom: 0;
+.time {
+  height: fit-content;
+  position: absolute;
+  right: 12px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  font-size: 14px;
+}
+
+.swiperModalButton {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  justify-content: flex-start;
+  padding: 60px 80px 110px;
+  @media (max-width: 768px) {
+    padding: 20px;
+    gap: 30px;
+    justify-content: space-around;
+    padding-bottom: 80px;
   }
+}
+
+/* モーダル */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 100;
+}
+
+.modal-image {
+  width: 100%;
+}
+
+/* モーダルがactiveの時 */
+.modal.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* モーダル背景のオーバーレイ部分 */
+.modal__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+/* モーダルのコンテンツ */
+.modal__content {
+  position: relative;
+  width: 550px;
+  max-width: 60%;
+  padding: 20px;
+  padding: 30px 40px 0;
+  background: black;
+  border-radius: 8px;
+  filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.3));
+  @media (max-width: 768px) {
+    max-width: 70%;
+  }
+}
+
+.modal__content::after {
+  content: "";
+  background: white;
+  width: 100%;
+  height: 30px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-radius: 8px 8px 0 0;
+}
+
+.modal_inner {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* 閉じるボタン */
+.modal__close-btn {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 20;
+  background: black;
+  border-radius: 50%;
+}
+
+.modal__close-btn:hover {
+  opacity: 0.8;
+}
+
+/* 閉じるボタンのX */
+.lineClose {
+  display: inline-block;
+  vertical-align: middle;
+  color: #fff;
+  line-height: 6;
+  width: 1.1rem;
+  height: 0.1rem;
+  background: currentColor;
+  border-radius: 0.5rem;
+  position: relative;
+  transform: rotate(45deg);
+  padding: 0.5px;
+  margin-top: 8px;
+}
+
+.lineClose::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: inherit;
+  transform: rotate(90deg);
+}
+
+p.swiperText {
+  margin: 0;
+  text-align: center;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff !important;
+  width: auto !important;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 24px !important;
+}
+
+.swiper-wrapper {
+  align-items: center;
 }

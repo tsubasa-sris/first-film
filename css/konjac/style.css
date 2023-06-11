@@ -1,40 +1,50 @@
 html {
-  font-family: sans-serif; }
+  font-family: sans-serif;
+}
 
 body {
-  background-color: black; }
+  background-color: black;
+}
 
 .links {
   margin: 32px auto;
   text-align: center;
   display: flex;
   width: 100px;
-  justify-content: space-between; }
-  .links a {
-    display: inline-block;
-    text-decoration: none;
-    color: #fff; }
+  justify-content: space-between;
+}
+.links a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+}
 
 .house-icon {
-  width: 20px; }
-  .house-icon img {
-    width: 100%;
-    height: auto; }
+  width: 20px;
+}
+.house-icon img {
+  width: 100%;
+  height: auto;
+}
 
 .border {
-  border-right: 1.5px solid #fff; }
+  border-right: 1.5px solid #fff;
+}
 
 .twitter-icon {
-  font-size: 24px; }
+  font-size: 24px;
+}
 
 .tweet {
   margin: 30px auto;
-  width: 550px; }
-  .tweet img {
-    width: 100%;
-    height: auto; }
-  @media (max-width: 768px) {
-    .tweet {
-      width: 95%; } }
-
-/*# sourceMappingURL=style.css.map */
+  width: 550px;
+}
+.tweet img {
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 768px) {
+  .tweet {
+    width: 95%;
+  }
+}/*# sourceMappingURL=style.css.map */

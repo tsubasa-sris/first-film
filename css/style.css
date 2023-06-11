@@ -1,141 +1,103 @@
-@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 :root {
   --background-color: #353232;
   --text: #fff;
-  --mode: rgba(248, 248, 248, 0.8); }
-
-:root[data-theme-mode='light'] {
-  --background-color: #F8F8F8;
-  --text: #000;
-  --mode: rgba(53, 50, 48, 0.8); }
+  --mode: rgba(248, 248, 248, 0.8);
+}
 
 body {
-  background: var(--background-color); }
+  background-image: url("../images/background.png");
+  background-size: cover;
+  font-family: "Press Start 2P", cursive;
+  color: #10924A;
+}
+
+.all {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+@media (max-width: 768px) {
+  .all {
+    position: static;
+  }
+}
 
 .intro {
   text-align: center;
-  margin: 50px auto 20px;
-  color: var(--text); }
-  .intro h1 {
-    font-size: 26px;
-    margin-bottom: 16px;
-    font-family: 'Nanum Myeongjo', sans-serif; }
-  .intro p {
-    font-size: 16px;
-    line-height: 1.5;
-    font-family: sans-serif;
-    padding: 16px; }
-    @media (max-width: 768px) {
-      .intro p {
-        font-size: 13px; } }
+}
+.intro .main {
+  font-size: 56px;
+  margin-bottom: 16px;
+  position: relative;
+}
+.intro .main .sub {
+  font-size: 26px;
+  position: absolute;
+  right: 5px;
+  bottom: -30px;
+}
+@media (max-width: 768px) {
+  .intro {
+    margin: 48px auto 12px;
+  }
+  .intro .main {
+    font-size: 40px;
+  }
+}
 
 .works {
   display: flex;
-  margin: 0 auto 120px;
-  max-width: 800px;
-  min-width: 700px;
-  padding: 15px;
+  margin: 120px auto 120px;
   justify-content: space-between;
-  flex-wrap: wrap; }
-  @media (max-width: 768px) {
-    .works {
-      display: block;
-      min-width: 85%;
-      margin: 0 auto 16px; } }
-
-.thubm-nail {
-  width: 48%;
-  margin-bottom: 28px;
-  height: auto; }
-  .thubm-nail img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    border: #B5B5B5 solid 1px;
-    box-shadow: 4px 8px 10px 0px rgba(0, 0, 0, 0.2); }
-  .thubm-nail img:hover {
-    opacity: 0.6;
-    transition: 0.3s ease; }
-  @media (max-width: 768px) {
-    .thubm-nail {
-      width: 100%;
-      display: inline-block; } }
+  text-align: center;
+  width: 550px;
+  gap: 100px;
+}
+.works a {
+  text-decoration: none;
+  color: #10924A;
+}
+.works p {
+  margin-top: 12px;
+}
+.works img {
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 768px) {
+  .works {
+    display: block;
+    width: auto;
+    margin: 86px auto 0;
+  }
+  .works img {
+    width: 120px;
+  }
+  .works a {
+    display: block;
+    margin: 0 auto 56px;
+    width: 130px;
+  }
+}
 
 .links {
   display: flex;
-  height: 100%; }
-  @media (max-width: 768px) {
-    .links {
-      padding: 60px 0 60px; } }
-
-.link {
-  display: flex;
-  justify-content: space-around;
-  font-size: 36px;
-  margin: auto 40px;
-  width: 100%; }
-  .link a {
-    text-decoration: none;
-    color: var(--text); }
-  .link a:hover {
-    opacity: 0.5;
-    transition: 0.3s ease; }
-  @media (max-width: 768px) {
-    .link {
-      margin: auto 0; } }
-
-input[type="checkbox"] {
-  display: none; }
-
-.switch {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background: var(--mode);
-  border-radius: 50%; }
-
-.switch-label {
-  cursor: pointer;
-  width: 25px;
-  overflow: hidden;
-  display: inline-block;
-  height: 25px;
-  padding: 13px; }
-
-.switch-mode {
-  font-size: 25px; }
-
-#switch-mode-light {
-  display: inline-block; }
-
-#switch-mode-dark {
-  display: inline-block;
-  margin-bottom: 15px; }
-
-.cat {
-  font-size: 32px;
-  position: sticky;
-  bottom: 0;
-  left: 26px;
-  display: inline-block;
-  cursor: pointer;
-  text-decoration: none; }
-  @media (max-width: 768px) {
-    .cat {
-      position: static;
-      margin-left: 16px; } }
-  .cat .heart {
-    display: none;
-    font-size: 18px;
-    text-align: center;
-    margin-bottom: 5px;
-    color: var(--mode); }
-
-.cat:hover .heart {
-  display: block;
-  transition: 0.3 ease; }
-  @media (max-width: 768px) {
-    .cat:hover .heart {
-      display: none; } }
-
-/*# sourceMappingURL=style.css.map */
+  justify-content: center;
+  font-size: 48px;
+  gap: 64px;
+}
+.links a {
+  text-decoration: none;
+  color: #10924A;
+}
+@media (max-width: 768px) {
+  .links {
+    padding: 60px 0 60px;
+  }
+}/*# sourceMappingURL=style.css.map */

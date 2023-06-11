@@ -1,65 +1,267 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>tsubasa</title>
-    <meta name="description" content="prittier than what i see">
-    <meta name="author" content="tsubasa">
-    <meta name="kewwords" content="film photography">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="tsubasa sris" />
+    <meta name="author" content="tsubasa" />
+    <meta name="kewwords" content="film photography" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta property="og:title" content="halo">
-    <meta property="og:description" content="">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tsubasa-sris.github.io">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta property="og:image" content="https://tsubasa-sris.github.io/images/">
+    <meta property="og:title" content="halo" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tsubasa-sris.github.io" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      property="og:image"
+      content="https://tsubasa-sris.github.io/images/blender-works/ogimage.png"
+    />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
-    <link rel="stylesheet" type="text/css" href="../css/blender-works/style.css">
-    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="images/favicon-index.png">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/blender-works/style.css"
+    />
+    <link
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      rel="stylesheet"
+    />
+    <!-- <link rel="icon" type="image/x-icon" href="images/favicon-index.png"> -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   </head>
 
   <body>
-    <div class="title">
-      <div class="title__wrap">
-        <div class="title__main">
-          Blender Works
+    <a class="house-icon" href="../">
+      <img src="../images/blender-works/home.svg" alt="" />
+    </a>
+    <h1 class="title">blender works</h1>
+    <div class="image swiperModalButton">
+      <div class="image modalOpen" data-modal="1">
+        <img src="../images/blender-works/small/room1.png" alt="" />
+        <p>room.jpg</p>
+      </div>
+      <div class="image modalOpen" data-modal="2">
+        <img src="../images/blender-works/small/room2.png" alt="" />
+        <p>rain.jpg</p>
+      </div>
+      <div class="image modalOpen" data-modal="3">
+        <img src="../images/blender-works/small/kitchen.png" alt="" />
+        <p>daylight.jpg</p>
+      </div>
+      <div class="image modalOpen" data-modal="4">
+        <img src="../images/blender-works/small/pc.png" alt="" />
+        <p>good_vibes_only.jpg</p>
+      </div>
+      <div class="image modalOpen" data-modal="5">
+        <img src="../images/blender-works/small/tea.png" alt="" />
+        <p>tea.jpg</p>
+      </div>
+      <div class="image modalOpen" data-modal="6">
+        <img src="../images/blender-works/small/backroom1.png" alt="" />
+        <p>work.jpg</p>
+      </div>
+      <div class="image modalOpen" data-modal="7">
+        <img src="../images/blender-works/small/backroom2.png" alt="" />
+        <p>safe.jpg</p>
+      </div>
+      <div class="image modalOpen" data-modal="8">
+        <img src="../images/blender-works/small/backroom3.png" alt="" />
+        <p>chair.jpg</p>
+      </div>
+      <div class="image modalOpen" data-modal="9">
+        <img src="../images/blender-works/small/glass2.png" alt="" />
+        <p>study_of_liquids.jpg</p>
+      </div>
+      <div class="image modalOpen" data-modal="10">
+        <img src="../images/blender-works/small/glass1.png" alt="" />
+        <p>study_of_glasses.jpg</p>
+      </div>
+      <div class="image modalOpen" data-modal="11">
+        <img src="../images/blender-works/small/glass-solo1.png" alt="" />
+        <p>glass1.jpg</p>
+      </div>
+      <div class="image modalOpen" data-modal="12">
+        <img src="../images/blender-works/small/glass-solo2.png" alt="" />
+        <p>glass2.jpg</p>
+      </div>
+      <div class="image modalOpen" data-modal="3">
+        <img src="../images/blender-works/small/glass-solo3.png" alt="" />
+        <p>glss3.jpg</p>
+      </div>
+      <div class="image modalOpen" data-modal="13">
+        <img src="../images/blender-works/small/glass-solo4.png" alt="" />
+        <p>glass4.jpg</p>
+      </div>
+      <div class="image modalOpen" data-modal="14">
+        <img src="../images/blender-works/small/glass-solo5.png" alt="" />
+        <p>glass5.jpg</p>
+      </div>
+      <div class="image modalOpen" data-modal="15">
+        <img src="../images/blender-works/small/glass-solo6.png" alt="" />
+        <p>glass6.jpg</p>
+      </div>
+    </div>
+    <div class="footer">
+      <a href="../" class="home">Home</a>
+      <p><span class="time" id="real-time"></span></p>
+    </div>
+
+    <!-- モーダル -->
+    <div class="modal" id="modal">
+      <div class="modal__overlay modalClose"></div>
+      <div class="modal__content">
+        <div class="modal__close-btn modalClose" aria-label="閉じる">
+          <span class="lineClose"></span>
         </div>
-        <div class="title__name">
-          tsubasa
+        <div class="modal_inner">
+          <!-- スライダー -->
+          <div class="swiper modalInSlider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide modalInSlider">
+                <!-- <p class="swiperText">スライド1</p> -->
+                <img
+                  class="modal-image"
+                  src="../images/blender-works/modal/room1.png"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide modalInSlider">
+                <!-- <p class="swiperText">スライド1</p> -->
+                <img
+                  class="modal-image"
+                  src="../images/blender-works/modal/room2.png"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide modalInSlider">
+                <!-- <p class="swiperText">スライド1</p> -->
+                <img
+                  class="modal-image"
+                  src="../images/blender-works/modal/kitchen.png"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide modalInSlider">
+                <!-- <p class="swiperText">スライド1</p> -->
+                <img
+                  class="modal-image"
+                  src="../images/blender-works/modal/pc.png"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide modalInSlider">
+                <!-- <p class="swiperText">スライド1</p> -->
+                <img
+                  class="modal-image"
+                  src="../images/blender-works/modal/tea.png"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide modalInSlider">
+                <!-- <p class="swiperText">スライド1</p> -->
+                <img
+                  class="modal-image"
+                  src="../images/blender-works/modal/backroom1.png"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide modalInSlider">
+                <!-- <p class="swiperText">スライド1</p> -->
+                <img
+                  class="modal-image"
+                  src="../images/blender-works/modal/backroom2.png"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide modalInSlider">
+                <!-- <p class="swiperText">スライド1</p> -->
+                <img
+                  class="modal-image"
+                  src="../images/blender-works/modal/backroom3.png"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide modalInSlider">
+                <!-- <p class="swiperText">スライド1</p> -->
+                <img
+                  class="modal-image"
+                  src="../images/blender-works/modal/glass2.png"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide modalInSlider">
+                <!-- <p class="swiperText">スライド1</p> -->
+                <img
+                  class="modal-image"
+                  src="../images/blender-works/modal/glass1.png"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide modalInSlider">
+                <!-- <p class="swiperText">スライド1</p> -->
+                <img
+                  class="modal-image"
+                  src="../images/blender-works/modal/glass-solo1.png"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide modalInSlider">
+                <!-- <p class="swiperText">スライド1</p> -->
+                <img
+                  class="modal-image"
+                  src="../images/blender-works/modal/glass-solo2.png"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide modalInSlider">
+                <!-- <p class="swiperText">スライド1</p> -->
+                <img
+                  class="modal-image"
+                  src="../images/blender-works/modal/glass-solo3.png"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide modalInSlider">
+                <!-- <p class="swiperText">スライド1</p> -->
+                <img
+                  class="modal-image"
+                  src="../images/blender-works/modal/glass-solo4.png"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide modalInSlider">
+                <!-- <p class="swiperText">スライド1</p> -->
+                <img
+                  class="modal-image"
+                  src="../images/blender-works/modal/glass-solo5.png"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide modalInSlider">
+                <!-- <p class="swiperText">スライド1</p> -->
+                <img
+                  class="modal-image"
+                  src="../images/blender-works/modal/glass-solo6.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
         </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
     </div>
-    <div class="collections">
-      <div class="collection">
-        <img class="image image--room" src="../images/blender-works/room1.png" alt="">
-        <img class="image image--room" src="../images/blender-works/room2.png" alt="">
-        <img class="image image--room" src="../images/blender-works/room3.png" alt="">
-      </div>
-      <div class="collection">
-        <img class="image" src="../images/blender-works/light.png" alt="">
-      </div>
-      <div class="collection">
-        <img class="image image--flex" src="../images/blender-works/donut.png" alt="">
-        <img class="image image--flex" src="../images/blender-works/tea.png" alt="">
-      </div>
-      <div class="collection">
-        <img class="image image--flex" src="../images/blender-works/game1.png" alt="">
-        <img class="image image--flex" src="../images/blender-works/game2.png" alt="">
-      </div>
-      <div class="collection">
-        <img class="image image--flex" src="../images/blender-works/boat.gif" alt="">
-        <img class="image image--flex" src="../images/blender-works/pcs.png" alt="">
-      </div>
-    </div>
-    <div class="links">
-      <a class="house-icon" href="../">
-        <img src="../images/films/house-light.svg" alt="">
-      </a>
-    </div>
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
-    <script src="js/film.js"></script>
+    <script src="../js/blender.js"></script>
   </body>
 </html>
